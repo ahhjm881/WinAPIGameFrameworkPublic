@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Games">
+      <UniqueIdentifier>{de163352-c433-407e-bf01-ce55bcc4d403}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Managers">
+      <UniqueIdentifier>{d7122fe9-4cd4-4497-911a-2974885b5297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Managers\Game">
+      <UniqueIdentifier>{3c4ed0d8-4148-4a61-bec5-3b06bc8a4673}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Managers\Input">
+      <UniqueIdentifier>{fb1bb3e5-902e-4fe7-ac04-b889cf445614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Debug">
+      <UniqueIdentifier>{8a20e034-6901-49bd-938f-32b4fc976c22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object">
+      <UniqueIdentifier>{00262439-4b8a-4f07-b834-039a39391065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\Abstract">
+      <UniqueIdentifier>{16647e6b-ec79-4ef6-a3dd-c5742db04f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\Component">
+      <UniqueIdentifier>{ef7c37ae-fc4d-4ea8-9e0c-ee6e5d9cb5e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\GameObjects">
+      <UniqueIdentifier>{84471dbe-c95f-44e0-910f-cd096dba4a19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\GameObjects\Actor">
+      <UniqueIdentifier>{d76b4838-8eb9-4dea-91c1-efbdfca81942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\Component\Renderer">
+      <UniqueIdentifier>{533370fe-e35e-4f11-9065-ab99e3793dce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Managers\Game\LoopMain">
+      <UniqueIdentifier>{59c767b1-eb56-4d4f-b155-a7515b214d27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Managers\Game\Camera">
+      <UniqueIdentifier>{b9f17e19-968c-44be-8056-4b57027831b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\GameObjects\Scene">
+      <UniqueIdentifier>{710ea0b6-22af-4ca0-872b-bfb7b778b6e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Functional">
+      <UniqueIdentifier>{8428ac8e-fa2e-4745-ade0-d56c04791e55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Functional\Collision">
+      <UniqueIdentifier>{ac2d2aab-4bce-4b5d-95c7-a007c8e03700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Functional\QuadTree">
+      <UniqueIdentifier>{02c38932-564a-412d-82b9-6f92969ae84b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\Component\Collider">
+      <UniqueIdentifier>{7b207fce-edb5-4b97-9176-aa627f37593a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\Component\Collider\AABB">
+      <UniqueIdentifier>{fdff0e75-f040-49c7-9980-7e093d61e7f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\AI">
+      <UniqueIdentifier>{3fd59529-9a07-4d29-b752-7912516052df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\AI\PathFiind">
+      <UniqueIdentifier>{3bd80b61-cf2a-4278-b23a-2f3a72715802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Util">
+      <UniqueIdentifier>{d2922fe1-0052-49f4-b195-d2bc35ff0c8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\GameObjects\Actor\Managers">
+      <UniqueIdentifier>{ff4c9e8d-9f06-4ee8-b2c9-99f0dba62905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\Component\Text">
+      <UniqueIdentifier>{46890076-7c33-48c7-9101-f30820281649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\GameObjects\Actor\Managers\Observer">
+      <UniqueIdentifier>{39917671-4bda-4a34-9964-087bf3cb897b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\GameObjects\Actor\TextDraw">
+      <UniqueIdentifier>{4a1f3cd9-348c-434a-9b00-ffc74c346e7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Games\Object\Component\PathFinder">
+      <UniqueIdentifier>{f4b40823-6d5c-45e1-9910-29ea9ccee453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Util\Math">
+      <UniqueIdentifier>{44d8e9a6-38c4-4ea3-ae86-be8a7b728704}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowGameProj.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>소스 파일\Games\Managers\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug.h">
+      <Filter>소스 파일\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>소스 파일\Games\Object\Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseHeader.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Info.h">
+      <Filter>소스 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>소스 파일\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>소스 파일\Games\Managers\Game\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>소스 파일\Games\Managers\Game\LoopMain</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScene.h">
+      <Filter>소스 파일\Games\Object\GameObjects\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="AABB.h">
+      <Filter>소스 파일\Functional\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadTree.h">
+      <Filter>소스 파일\Functional\QuadTree</Filter>
+    </ClInclude>
+    <ClInclude Include="AABBCollider.h">
+      <Filter>소스 파일\Games\Object\Component\Collider\AABB</Filter>
+    </ClInclude>
+    <ClInclude Include="AStar.h">
+      <Filter>소스 파일\Games\AI\PathFiind</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadNode.h">
+      <Filter>소스 파일\Functional\QuadTree</Filter>
+    </ClInclude>
+    <ClInclude Include="PathNode.h">
+      <Filter>소스 파일\Games\AI\PathFiind</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>소스 파일\Games\Object\Component\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="FPSDraw.h">
+      <Filter>소스 파일\Games\Object\GameObjects\Actor\TextDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="MyName.h">
+      <Filter>소스 파일\Games\Object\GameObjects\Actor\TextDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraObserver.h">
+      <Filter>소스 파일\Games\Object\GameObjects\Actor\Managers\Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>소스 파일\Games\Object\Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="PathFinder.h">
+      <Filter>소스 파일\Games\Object\Component\PathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>소스 파일\Util\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>소스 파일\Util\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="type.h">
+      <Filter>소스 파일\Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WindowGameProj.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>소스 파일\Games\Managers\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>소스 파일\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>소스 파일\Games\Managers\Game\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>소스 파일\Games\Managers\Game\LoopMain</Filter>
+    </ClCompile>
+    <ClCompile Include="AABB.cpp">
+      <Filter>소스 파일\Functional\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadTree.cpp">
+      <Filter>소스 파일\Functional\QuadTree</Filter>
+    </ClCompile>
+    <ClCompile Include="AABBCollider.cpp">
+      <Filter>소스 파일\Games\Object\Component\Collider\AABB</Filter>
+    </ClCompile>
+    <ClCompile Include="AStar.cpp">
+      <Filter>소스 파일\Games\AI\PathFiind</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadNode.cpp">
+      <Filter>소스 파일\Functional\QuadTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>소스 파일\Games\Object\Component\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.h">
+      <Filter>소스 파일\Games\Object\Abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="PathFinder.cpp">
+      <Filter>소스 파일\Games\Object\Component\PathFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug.cpp">
+      <Filter>소스 파일\Debug</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WindowGameProj.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="WindowGameProj.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint">
+      <Filter>소스 파일\Util</Filter>
+    </None>
+  </ItemGroup>
+</Project>
