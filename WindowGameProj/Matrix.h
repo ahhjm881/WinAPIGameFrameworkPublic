@@ -6,6 +6,7 @@
 #include <cassert>	
 #include "Vector.h"
 
+
 namespace
 {
 #define CAST_TYPE(x) (static_cast<primitive_type>(x))
@@ -55,12 +56,12 @@ namespace CKMath
 		}
 
 	public:
-		inline primitive_type* operator[](int i)
+		__forceinline primitive_type* operator[](int i)
 		{
 			return m_matrix[i];
 		}
 
-		constexpr Matrix operator+(const Matrix<matrix_row, matrix_col, primitive_type>& rhs_m) const noexcept
+		__forceinline constexpr Matrix operator+(const Matrix<matrix_row, matrix_col, primitive_type>& rhs_m) const noexcept
 		{
 			Matrix<matrix_row, matrix_col, primitive_type> m;
 
@@ -75,7 +76,7 @@ namespace CKMath
 			return m;
 		}
 
-		constexpr Matrix operator-(const Matrix<matrix_row, matrix_col, primitive_type>& rhs_m) const noexcept
+		__forceinline constexpr Matrix operator-(const Matrix<matrix_row, matrix_col, primitive_type>& rhs_m) const noexcept
 		{
 			Matrix<matrix_row, matrix_col, primitive_type> m;
 
@@ -90,7 +91,7 @@ namespace CKMath
 			return m;
 		}
 
-		constexpr Matrix operator*(const primitive_type& value) const noexcept
+		__forceinline constexpr Matrix operator*(const primitive_type& value) const noexcept
 		{
 			Matrix<matrix_row, matrix_col, primitive_type> m;
 
@@ -104,7 +105,7 @@ namespace CKMath
 
 			return m;
 		}
-		constexpr Matrix operator/(const primitive_type& value) const noexcept
+		__forceinline constexpr Matrix operator/(const primitive_type& value) const noexcept
 		{
 			Matrix<matrix_row, matrix_col, primitive_type> m;
 
@@ -122,12 +123,9 @@ namespace CKMath
 		}
 
 		template<class TM, std::enable_if<TM::Row == matrix_col, int>::type = 0>
-		constexpr Matrix<TM::Row, TM::Column, primitive_type> operator*(const TM& rhs_m) const noexcept
+		__forceinline constexpr Matrix<TM::Row, TM::Column, primitive_type> operator*(const TM& rhs_m) const noexcept
 		{
-
 			Matrix<TM::Row, TM::Column, primitive_type> m;
-
-			assert(matrix_col == TM::Row);
 
 			for (int j = 0; j < TM::Column; j++)
 			{
@@ -147,7 +145,7 @@ namespace CKMath
 		}
 
 	public:
-		constexpr static inline Matrix<matrix_row, matrix_col, primitive_type> CreateIdentity() noexcept
+		__forceinline constexpr static Matrix<matrix_row, matrix_col, primitive_type> CreateIdentity() noexcept
 		{
 			Matrix<matrix_row, matrix_col, primitive_type> m;
 
@@ -160,20 +158,20 @@ namespace CKMath
 
 			return m;
 		}
-		constexpr static inline Matrix<matrix_row, matrix_col, primitive_type> CreateZero() noexcept
+		__forceinline constexpr static Matrix<matrix_row, matrix_col, primitive_type> CreateZero() noexcept
 		{
 			return Matrix<matrix_row, matrix_col, primitive_type>();
 		}
 
 	public:
-		constexpr inline void SetAt(int row, int col, primitive_type value) noexcept
+		__forceinline constexpr void SetAt(int row, int col, primitive_type value) noexcept
 		{
 			AssertIndex(row, col);
 
 			m_matrix[row][col] = value;
 		}
 
-		constexpr inline primitive_type GetAt(int row, int col) const noexcept
+		__forceinline constexpr primitive_type GetAt(int row, int col) const noexcept
 		{
 			AssertIndex(row, col);
 
@@ -181,7 +179,7 @@ namespace CKMath
 		}
 
 	private:
-		constexpr inline void AssertIndex(const int& row, const int& col) const noexcept
+		__forceinline constexpr void AssertIndex(const int& row, const int& col) const noexcept
 		{
 			assert(row >= 0 && row < matrix_row);
 			assert(col >= 0 && col < matrix_col);
@@ -201,7 +199,7 @@ namespace CKMath
 		using TVector = _tagVector<primitive_type>;
 
 	public:
-		constexpr inline static Matrix<4, 4, primitive_type> CreateAMatrix4x4
+		__forceinline constexpr static Matrix<4, 4, primitive_type> CreateAMatrix4x4
 		(const TVector& baseX, const TVector& baseY, const TVector& baseZ, const TVector& position = TVector::zero) noexcept
 		{
 			return Matrix<4, 4, primitive_type>
@@ -213,7 +211,7 @@ namespace CKMath
 			};
 		}
 
-		constexpr inline static Matrix<4, 4, primitive_type> CreateAMatrix4x4(const TVector& position) noexcept
+		__forceinline constexpr static Matrix<4, 4, primitive_type> CreateAMatrix4x4(const TVector& position) noexcept
 		{
 			return Matrix<4, 4, primitive_type>
 			{
@@ -224,7 +222,7 @@ namespace CKMath
 			};
 		}
 
-		constexpr inline static Matrix<3, 3, primitive_type> CreateAMatrix2x2
+		__forceinline constexpr static Matrix<3, 3, primitive_type> CreateAMatrix2x2
 		(const TVector& baseX, const TVector& baseY, const TVector& position = TVector::zero)
 		{
 			return Matrix<3, 3, primitive_type>
@@ -235,7 +233,7 @@ namespace CKMath
 					ZERO, ZERO, ONE
 			};
 		}
-		constexpr inline static Matrix<3, 3, primitive_type> CreateAMatrix2X2(const TVector& position) noexcept
+		__forceinline constexpr static Matrix<3, 3, primitive_type> CreateAMatrix2X2(const TVector& position) noexcept
 		{
 			return Matrix<3, 3, primitive_type>
 			{
@@ -245,17 +243,17 @@ namespace CKMath
 			};
 		}
 
-		constexpr inline static Matrix<4, 1, primitive_type> To3DAMatrix(const TVector& v) noexcept
+		__forceinline constexpr static Matrix<4, 1, primitive_type> To3DAMatrix(const TVector& v) noexcept
 		{
 			return Matrix<4, 1, primitive_type>{v.x, v.y, v.z, ONE};
 		}
-		constexpr inline static Matrix<3, 1, primitive_type> To2DAMatrix(const TVector& v) noexcept
+		__forceinline constexpr static Matrix<3, 1, primitive_type> To2DAMatrix(const TVector& v) noexcept
 		{
 			return Matrix<3, 1, primitive_type>{v.x, v.y, ONE};
 		}
 
 		template<int matrix_row, int matrix_col, primitive_type>
-		constexpr inline static Matrix<matrix_col, matrix_row, primitive_type> Transpose(const Matrix<matrix_row, matrix_col, primitive_type>& m) noexcept
+		__forceinline constexpr static Matrix<matrix_col, matrix_row, primitive_type> Transpose(const Matrix<matrix_row, matrix_col, primitive_type>& m) noexcept
 		{
 			Matrix<matrix_col, matrix_row, primitive_type> tm;
 

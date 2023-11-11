@@ -9,7 +9,7 @@ private:
     Text* m_text;
 
 public:
-    FPSDraw(__POINT__ x=0, __POINT__ y=0) : Actor(x, y), m_text(nullptr)
+    FPSDraw(Vector pos) : Actor(pos), m_text(nullptr)
     {
         m_text = new Text(this);
 

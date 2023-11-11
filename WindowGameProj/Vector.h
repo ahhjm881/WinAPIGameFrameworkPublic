@@ -1,4 +1,5 @@
 #pragma once
+
 #include <cmath>
 
 namespace CKMath
@@ -15,85 +16,92 @@ namespace CKMath
 
 	public:
 		constexpr _tagVector() noexcept
-			: x((T)0), y((T)0) {}
+			: x((T)0), y((T)0), z((T)0) {}
 
 		constexpr _tagVector(T _x, T _y) noexcept
-			: x((T)_x), y((T)_y) {}
+			: x((T)_x), y((T)_y), z((T)0) {}
 
-		inline constexpr _tagVector<T> operator+(const _tagVector<T>& v1) const noexcept
+		constexpr _tagVector(T _x, T _y, T _z) noexcept
+			: x((T)_x), y((T)_y), z((T)_z) {}
+
+		__forceinline constexpr _tagVector<T> operator+(const _tagVector<T>& v1) const noexcept
 		{
-			return _tagVector<T>(v1.x + x, v1.y + y);
+			return _tagVector<T>(v1.x + x, v1.y + y, v1.z + z);
 		}
 
-		inline constexpr _tagVector<T> operator-(const _tagVector<T>& v1) const noexcept
+		__forceinline constexpr _tagVector<T> operator-(const _tagVector<T>& v1) const noexcept
 		{
-			return _tagVector<T>(x - v1.x, y - v1.y);
-		}
-
-		template<class U>
-		inline constexpr _tagVector<T> operator*(const U& value) const noexcept
-		{
-			return _tagVector<T>((T)(x * value), (T)(y * value));
+			return _tagVector<T>(x - v1.x, y - v1.y, z - v1.z);
 		}
 
 		template<class U>
-		inline constexpr _tagVector<T> operator/(const U& value) const noexcept
+		__forceinline constexpr _tagVector<T> operator*(const U& value) const noexcept
 		{
-			return _tagVector<T>((T)(x / value), (T)(y / value));
+			return _tagVector<T>((T)(x * value), (T)(y * value), (T)(y * value));
 		}
 
-		inline constexpr void operator+=(const _tagVector<T>& v1) noexcept
+		template<class U>
+		__forceinline constexpr _tagVector<T> operator/(const U& value) const noexcept
+		{
+			return _tagVector<T>((T)(x / value), (T)(y / value), (T)(z / value));
+		}
+
+		__forceinline constexpr void operator+=(const _tagVector<T>& v1) noexcept
 		{
 			x += v1.x;
 			y += v1.y;
+			z += v1.z;
 		}
-		inline constexpr void operator-=(const _tagVector<T>& v1) noexcept
+		__forceinline constexpr void operator-=(const _tagVector<T>& v1) noexcept
 		{
 			x -= v1.x;
 			y -= v1.y;
+			z -= v1.z;
 		}
 
-		inline constexpr bool operator==(const _tagVector<T>& v) const noexcept
+		__forceinline constexpr bool operator==(const _tagVector<T>& v) const noexcept
 		{
-			return (v.x == x && v.y == y);
+			return (v.x == x && v.y == y && v.z == z);
 		}
 
 		template<class U>
-		inline constexpr void operator*=(const U& value) noexcept
+		__forceinline constexpr void operator*=(const U& value) noexcept
 		{
 			x *= value;
 			y *= value;
+			z *= value;
 		}
 
 		template<class U>
-		inline constexpr void operator/=(const U& value) noexcept
+		__forceinline constexpr void operator/=(const U& value) noexcept
 		{
 			x /= value;
 			y /= value;
+			z /= value;
 		}
 
-		inline constexpr _tagVector<T> operator-(void) const noexcept
+		__forceinline constexpr _tagVector<T> operator-(void) const noexcept
 		{
-			return _tagVector<T>(-x, -y);
+			return _tagVector<T>(-x, -y, -z);
 		}
 
 		template<typename U>
-		inline constexpr operator _tagVector<U>() const noexcept
+		__forceinline constexpr operator _tagVector<U>() const noexcept
 		{
-			return _tagVector<U>((U)x, (U)y);
+			return _tagVector<U>((U)x, (U)y, (U)z);
 		}
 
-		inline constexpr T Magnitude() const noexcept
+		__forceinline constexpr T Magnitude() const noexcept
 		{
-			return sqrt(x * x + y * y);
+			return sqrt(x * x + y * y + z * z);
 		}
 
-		inline constexpr T sqrMagnitude() const noexcept
+		__forceinline constexpr T sqrMagnitude() const noexcept
 		{
-			return x * x + y * y;
+			return x * x + y * y + z * z;
 		}
 
-		static inline constexpr _tagVector<T> Lerp(const _tagVector<T>& from, const _tagVector<T>& to, float t)  noexcept
+		__forceinline static constexpr _tagVector<T> Lerp(const _tagVector<T>& from, const _tagVector<T>& to, float t)  noexcept
 		{
 			if (t < 0.f)t = 0.f;
 			if (t > 1.f) t = 1.f;
@@ -103,7 +111,7 @@ namespace CKMath
 			return (s * from) + (t * to);
 		}
 
-		static inline constexpr _tagVector<T> MoveToWord(const _tagVector<T>& from, const _tagVector<T>& to, float speed) noexcept
+		__forceinline static constexpr _tagVector<T> MoveToWord(const _tagVector<T>& from, const _tagVector<T>& to, float speed) noexcept
 		{
 			_tagVector<T> v = (to - from);
 
@@ -130,27 +138,27 @@ namespace CKMath
 
 		}
 
-		inline constexpr _tagVector<T> Normalize() const noexcept
+		__forceinline constexpr _tagVector<T> Normalize() const noexcept
 		{
 			T m = Magnitude();
 			return _tagVector<T>(x / m, y / m);
 		}
 
 		template<typename U>
-		static inline constexpr _tagVector<T> MultipleVector(_tagVector<T> v1, _tagVector<U> v2) noexcept
+		__forceinline static constexpr _tagVector<T> MultipleVector(_tagVector<T> v1, _tagVector<U> v2) noexcept
 		{
 			return _tagVector<T>((T)(v1.x * v2.x), (T)(v1.y * v2.y));
 		}
 
-		static inline constexpr T Distance(_tagVector<T> v1, _tagVector<T> v2) noexcept
+		__forceinline static constexpr T Distance(_tagVector<T> v1, _tagVector<T> v2) noexcept
 		{
 			return (v1 - v2).Magnitude();
 		}
-		static inline constexpr T Dot(const _tagVector<T>& v1, const _tagVector<T>& v2) noexcept
+		__forceinline constexpr T Dot(const _tagVector<T>& v1, const _tagVector<T>& v2) noexcept
 		{
 			return v1.x * v2.x + v1.y * v2.y;
 		}
-		static inline constexpr _tagVector<T> Project(_tagVector<T> v, _tagVector<T> normal) noexcept
+		__forceinline static constexpr _tagVector<T> Project(_tagVector<T> v, _tagVector<T> normal) noexcept
 		{
 			return normal * (_tagVector<T>::Dot(v, normal));
 		}

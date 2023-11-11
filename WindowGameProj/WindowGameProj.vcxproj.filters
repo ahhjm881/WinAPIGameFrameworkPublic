@@ -97,6 +97,9 @@
     <Filter Include="소스 파일\Util\Math">
       <UniqueIdentifier>{44d8e9a6-38c4-4ea3-ae86-be8a7b728704}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Util\Spatial">
+      <UniqueIdentifier>{23ca43fb-fa99-44a8-8f74-77f8a2c3a267}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -124,9 +127,6 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Info.h">
-      <Filter>소스 파일\Util</Filter>
-    </ClInclude>
-    <ClInclude Include="Transform.h">
       <Filter>소스 파일\Util</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
@@ -183,6 +183,9 @@
     <ClInclude Include="type.h">
       <Filter>소스 파일\Util</Filter>
     </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>소스 파일\Util\Spatial</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowGameProj.cpp">
@@ -190,9 +193,6 @@
     </ClCompile>
     <ClCompile Include="Input.cpp">
       <Filter>소스 파일\Games\Managers\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="Transform.cpp">
-      <Filter>소스 파일\Util</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
       <Filter>소스 파일\Games\Managers\Game\Camera</Filter>
@@ -226,6 +226,9 @@
     </ClCompile>
     <ClCompile Include="Debug.cpp">
       <Filter>소스 파일\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>소스 파일\Util\Spatial</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

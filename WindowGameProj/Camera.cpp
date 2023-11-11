@@ -1,3 +1,3 @@
 #include "Camera.h"
 
-Transform* Camera::m_transform = new Transform();
+Transform* Camera::m_transform = new Transform(Vector::zero);

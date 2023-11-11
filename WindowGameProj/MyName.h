@@ -6,7 +6,7 @@ class MyName :
     public Actor
 {
 public:
-    MyName(__POINT__ x = 0, __POINT__ y = 0) :Actor(x, y)
+    MyName(Vector pos) :Actor(pos)
     {
         AddComponent(new Text(this, "202113220_МеЧќСи"));
     }

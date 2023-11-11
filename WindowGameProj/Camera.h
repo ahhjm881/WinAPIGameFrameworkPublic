@@ -20,8 +20,8 @@ public:
 
 		IVector r
 		(
-			(int)(v.x + ((__POINT__)info.halfRect.x) - t.x),
-			(int)(-v.y + ((__POINT__)info.halfRect.y) - -t.y)
+			(int)(v.x + ((Int32)info.halfRect.x) - t.x),
+			(int)(-v.y + ((Int32)info.halfRect.y) - -t.y)
 		);
 
 		return r;
@@ -33,8 +33,8 @@ public:
 
 		IVector r
 		(
-			(int)(v.x - ((__POINT__)info.halfRect.x) + t.x),
-			(int)(-v.y + ((__POINT__)info.halfRect.y) + t.y)
+			(int)(v.x - ((Int32)info.halfRect.x) + t.x),
+			(int)(-v.y + ((Int32)info.halfRect.y) + t.y)
 		);
 
 		return r;

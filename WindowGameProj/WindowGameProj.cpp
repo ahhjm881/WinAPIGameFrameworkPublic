@@ -79,11 +79,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         else
         {
             QueryPerformanceCounter(&tickEnd);
-            tick = ((double)(tickEnd.QuadPart - tickStart.QuadPart) / tickFrequency.QuadPart); 
+            tick = ((double)(tickEnd.QuadPart - tickStart.QuadPart) / (double)tickFrequency.QuadPart);
             if (tick >= tickRate)
             {
                 QueryPerformanceCounter(&deltaTimeEnd);
-                deltaTime = ((double)(deltaTimeEnd.QuadPart - deltaTimeStart.QuadPart) / deltaTimeFrequency.QuadPart);
+                deltaTime = ((double)(deltaTimeEnd.QuadPart - deltaTimeStart.QuadPart) / (double)deltaTimeFrequency.QuadPart);
                 QueryPerformanceFrequency(&deltaTimeFrequency);
                 QueryPerformanceCounter(&deltaTimeStart);
                 if (g_hWnd != NULL)

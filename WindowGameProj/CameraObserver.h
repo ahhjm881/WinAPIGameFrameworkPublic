@@ -12,7 +12,7 @@ private:
     float m_speed;
 
 public:
-    CameraObserver(Transform* target, float speed = 10, PT x=0, PT y=0) : Actor(x, y), m_target(target), m_camera(nullptr), m_speed(speed)
+    CameraObserver(Transform* target, Vector pos, float speed = 10) : Actor(pos), m_target(target), m_camera(nullptr), m_speed(speed)
     {
         m_camera = Camera::GetTransform();
     }

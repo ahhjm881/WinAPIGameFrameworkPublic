@@ -1,7 +1,7 @@
 #include "Transform.h"
 
-Transform::Transform(__POINT__ x, __POINT__ y)
-	: m_position(Vector(x, y)), m_scale(Vector::one), m_rotation(Vector::zero), m_size(Vector::one)
+Transform::Transform(Vector pos)
+	: m_position(pos), m_scale(Vector::one), m_rotation(Vector::zero), m_size(Vector::one)
 {
 }
 

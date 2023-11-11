@@ -4,7 +4,6 @@
 namespace
 {
 	using namespace CKMath;
-	typedef float __POINT__;
 }
 
 
@@ -17,7 +16,7 @@ private:
 	Vector m_rotation;
 
 public:
-	Transform(__POINT__ x = 0, __POINT__ y = 0);
+	Transform(Vector pos);
 
 	Vector  GetPosition()		 const;
 	void    SetPosition(const Vector&);

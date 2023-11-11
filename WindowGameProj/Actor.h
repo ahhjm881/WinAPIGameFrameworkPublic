@@ -7,9 +7,8 @@
 #include "Info.h"
 #include <cassert>
 
-class Scene;
 
-typedef __POINT__ PT;
+class Scene;
 
 class Actor
 {
@@ -51,10 +50,8 @@ private:
 
 public:
 
-	Actor(__POINT__ x = 0, __POINT__ y = 0)
-		: m_transform(new Transform(x, y)), name("Undefined name"), destroyed(false), enabled(true), order(0), m_components({}) {}
-	Actor(Vector v)
-		: m_transform(new Transform(v.x, v.y)), name("Undefined name"), destroyed(false), enabled(true), order(0), m_components({}) {}
+	Actor(CKMath::Vector pos)
+		: m_transform(new Transform(pos)), name("Undefined name"), destroyed(false), enabled(true), order(0), m_components({}) {}
 
 	virtual ~Actor() 
 	{

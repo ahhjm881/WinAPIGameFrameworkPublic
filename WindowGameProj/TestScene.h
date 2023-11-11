@@ -7,7 +7,7 @@
 #include "AStar.h"
 #include "FPSDraw.h"
 #include "MyName.h"
-#include "Matrix.h"
+
 
 //#define DEBUG_DRAW_RECT
 
@@ -23,8 +23,8 @@ private:
 public:
     TestScene() : Scene(0, IVector(0, 0)), tree()
     {
-        AddActor(new FPSDraw(800, 470));
-        AddActor(new MyName(800, 450));
+        AddActor(new FPSDraw({ 800, 470 }));
+        AddActor(new MyName({ 800, 450 }));
 
         Matrix4x4 a = Matrix4x4
         {
